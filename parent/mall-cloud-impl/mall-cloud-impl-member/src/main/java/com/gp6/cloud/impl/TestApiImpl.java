@@ -15,6 +15,7 @@ public class TestApiImpl implements TestApi {
 
     @Override
     public MallResponse test() {
+        System.out.println(11);
         return MallResponse.ok();
     }
 

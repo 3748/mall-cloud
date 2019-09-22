@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author gp6
  * @date 2019/09/22
  */
-@RequestMapping("/test")
+@RequestMapping("test")
 public interface TestApi {
 
     /**

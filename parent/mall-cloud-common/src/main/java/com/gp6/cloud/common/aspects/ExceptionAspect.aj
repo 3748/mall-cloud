@@ -14,9 +14,9 @@ import org.springframework.stereotype.Component;
  */
 @Aspect
 @Component
-public aspect ExceptionAspect {
+public class ExceptionAspect {
 
-    @Around("execution(* com.gp6.cloud.api.impl..*(..)))")
+    @Around("execution(* com.gp6.cloud.impl..*(..)))")
     public Object aroundAspect(ProceedingJoinPoint proceedingJoinPoint) {
         System.out.println("环绕前增强");
         try {
