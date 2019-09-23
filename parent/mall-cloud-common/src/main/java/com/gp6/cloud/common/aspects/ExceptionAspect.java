@@ -27,7 +27,6 @@ public class ExceptionAspect {
      */
     @Around("execution(public * com.gp6.cloud.impl..*(..)))")
     public Object aroundAspect(ProceedingJoinPoint proceedingJoinPoint) {
-        System.out.println("环绕前增强");
         try {
             proceedingJoinPoint.proceed();
         } catch (MallException mallException) {
@@ -35,7 +34,6 @@ public class ExceptionAspect {
         } catch (Throwable e) {
             e.printStackTrace();
         }
-        System.out.println("环绕后增强");
         return null;
     }
 }

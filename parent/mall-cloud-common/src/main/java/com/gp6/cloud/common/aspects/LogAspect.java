@@ -40,25 +40,25 @@ public class LogAspect {
      * @param joinPoint JoinPoint
      */
     @Before(value = "apiImplAspect()")
-    public void methodBefore(JoinPoint joinPoint) {
+    public void beforeAspect(JoinPoint joinPoint) {
         ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = null;
         if (requestAttributes != null) {
             request = requestAttributes.getRequest();
         }
-        log.info("===============请求内容START===============");
+        log.info("Request Start");
         try {
             // 打印请求内容
             if (request != null) {
-                log.info("请求地址:" + request.getRequestURL().toString());
-                log.info("请求方式:" + request.getMethod());
+                log.info("Request Url:" + request.getRequestURL().toString());
+                log.info("Method:" + request.getMethod());
             }
-            log.info("请求类方法:" + joinPoint.getSignature());
-            log.info("请求类方法参数:" + Arrays.toString(joinPoint.getArgs()));
+            log.info("Signature:" + joinPoint.getSignature());
+            log.info("Param:" + Arrays.toString(joinPoint.getArgs()));
         } catch (Exception e) {
-            log.error("###LogAspectServiceApi.class methodBefore() ### ERROR:", e);
+            log.error("beforeAspect,error:{}", e);
         }
-        log.info("===============请求内容END===============");
+        log.info("Request End");
     }
 
     /**
@@ -67,13 +67,13 @@ public class LogAspect {
      * @param o 返回结果
      */
     @AfterReturning(returning = "o", value = "apiImplAspect()")
-    public void methodAfterReturn(Object o) {
-        log.info("--------------返回内容START----------------");
+    public void afterAspect(Object o) {
+        log.info("Response Start");
         try {
-            log.info("Response内容:" + OBJECT_MAPPER.writeValueAsString(o));
+            log.info("Response:" + OBJECT_MAPPER.writeValueAsString(o));
         } catch (Exception e) {
-            log.error("###LogAspectServiceApi.class methodAfterReturn() ### ERROR:", e);
+            log.error("afterAspect() error:{}", e);
         }
-        log.info("--------------返回内容END----------------");
+        log.info("Response End");
     }
 }
