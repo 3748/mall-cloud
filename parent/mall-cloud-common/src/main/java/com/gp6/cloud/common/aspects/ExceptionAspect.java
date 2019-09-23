@@ -1,6 +1,7 @@
 package com.gp6.cloud.common.aspects;
 
 import com.gp6.cloud.common.exceptions.MallException;
+import com.gp6.cloud.common.responses.MallResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -30,7 +31,7 @@ public class ExceptionAspect {
         try {
             proceedingJoinPoint.proceed();
         } catch (MallException mallException) {
-            System.out.println("1111");
+            return MallResponse.build(mallException.getResponseCodeEnum());
         } catch (Throwable e) {
             e.printStackTrace();
         }
