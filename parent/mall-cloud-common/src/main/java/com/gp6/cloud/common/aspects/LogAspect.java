@@ -14,17 +14,22 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 
+/**
+ * 日至切面
+ *
+ * @author gp6
+ * @date 2019/09/23
+ */
 @Aspect
 @Component
 @Slf4j
 public class LogAspect {
-
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
     /**
-     * 申明一个切点 里面是 execution表达式
+     * 申明一个切点
      */
-    @Pointcut("execution(public * com.gp6.cloud.impl.TestApiImpl.test())")
+    @Pointcut("execution(public * com.gp6.cloud.impl..*(..)))")
     private void apiImplAspect() {
 
     }
@@ -36,8 +41,7 @@ public class LogAspect {
      */
     @Before(value = "apiImplAspect()")
     public void methodBefore(JoinPoint joinPoint) {
-        ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder
-                .getRequestAttributes();
+        ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = null;
         if (requestAttributes != null) {
             request = requestAttributes.getRequest();

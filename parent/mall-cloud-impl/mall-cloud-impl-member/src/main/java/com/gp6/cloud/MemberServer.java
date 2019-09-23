@@ -15,8 +15,6 @@ import org.springframework.stereotype.Component;
  */
 @SpringBootApplication
 @EnableEurekaClient
-@ComponentScan("com.gp6.*.*")
-@EnableAspectJAutoProxy(proxyTargetClass = true)
 public class MemberServer {
 
     public static void main(String[] args) {
