@@ -41,23 +41,4 @@ public class ExceptionAspect {
         }
         return mallResponse;
     }
-
-    /**
-     * 返回值类型
-     *
-     * @param csp
-     * @return
-     */
-    private static Class<?> resVoType(Class<?> csp, String methodName) {
-
-        Method[] methods = csp.getDeclaredMethods();
-        Class<?> returnType = null;
-        for (Method method : methods) {
-            if (method.getName().equals(methodName)) {
-                returnType = method.getReturnType();
-                return returnType;
-            }
-        }
-        return returnType;
-    }
 }
