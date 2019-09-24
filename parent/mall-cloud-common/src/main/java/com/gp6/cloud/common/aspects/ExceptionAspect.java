@@ -1,5 +1,6 @@
 package com.gp6.cloud.common.aspects;
 
+import com.gp6.cloud.common.enums.ResponseCodeEnum;
 import com.gp6.cloud.common.exceptions.MallException;
 import com.gp6.cloud.common.responses.MallResponse;
 import lombok.extern.slf4j.Slf4j;
@@ -7,6 +8,8 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
+
+import java.lang.reflect.Method;
 
 /**
  * 异常切面
@@ -26,14 +29,35 @@ public class ExceptionAspect {
      * @return Object
      */
     @Around("execution(public * com.gp6.cloud.impl..*(..)))")
-    public Object aroundAspect(ProceedingJoinPoint proceedingJoinPoint) {
+    public MallResponse aroundAspect(ProceedingJoinPoint proceedingJoinPoint) {
+        MallResponse mallResponse;
         try {
-            proceedingJoinPoint.proceed();
+            mallResponse = (MallResponse) proceedingJoinPoint.proceed();
         } catch (MallException mallException) {
             return MallResponse.build(mallException.getResponseCodeEnum());
         } catch (Throwable e) {
-            e.printStackTrace();
+            log.error("aroundAspect,error:{}", e);
+            return MallResponse.build(ResponseCodeEnum.SYSTEM_ERROR);
         }
-        return null;
+        return mallResponse;
+    }
+
+    /**
+     * 返回值类型
+     *
+     * @param csp
+     * @return
+     */
+    private static Class<?> resVoType(Class<?> csp, String methodName) {
+
+        Method[] methods = csp.getDeclaredMethods();
+        Class<?> returnType = null;
+        for (Method method : methods) {
+            if (method.getName().equals(methodName)) {
+                returnType = method.getReturnType();
+                return returnType;
+            }
+        }
+        return returnType;
     }
 }

@@ -10,6 +10,7 @@ public enum ResponseCodeEnum {
 
 
     REQUEST_PARAM_ERROR(10000, "参数错误!"),
+    SYSTEM_ERROR(10001, "参数错误!"),
 
 
 
