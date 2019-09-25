@@ -9,8 +9,6 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
-import java.lang.reflect.Method;
-
 /**
  * 异常切面
  *
@@ -26,7 +24,7 @@ public class ExceptionAspect {
      * 环绕切面
      *
      * @param proceedingJoinPoint ProceedingJoinPoint
-     * @return Object
+     * @return MallResponse
      */
     @Around("execution(public * com.gp6.cloud.impl..*(..)))")
     public MallResponse aroundAspect(ProceedingJoinPoint proceedingJoinPoint) {

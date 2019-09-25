@@ -11,7 +11,7 @@
         <module>mall-cloud-eureka-server</module>
         <module>mall-cloud-api</module>
         <module>mall-cloud-common</module>
-        <module>mall-cloud-impl</module>
+        <module>mall-cloud-member</module>
     </modules>
     <packaging>pom</packaging>
 
