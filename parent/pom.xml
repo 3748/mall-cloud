@@ -12,6 +12,7 @@
         <module>mall-cloud-api</module>
         <module>mall-cloud-common</module>
         <module>mall-cloud-member</module>
+        <module>mall-cloud-message</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -32,6 +33,7 @@
         <!-- 整合Mybatis -->
         <mybatis-boot.version>2.0.1</mybatis-boot.version>
         <tk-mybatis.version>2.1.0</tk-mybatis.version>
+
     </properties>
 
     <dependencies>
@@ -53,6 +55,7 @@
         </dependency>
     </dependencies>
 
+    <!-- SpringCloud -->
     <dependencyManagement>
         <dependencies>
             <dependency>
