@@ -12,6 +12,11 @@ public enum ResponseCodeEnum {
     REQUEST_PARAM_ERROR(10001, "参数错误!"),
 
 
+    MEMBER_REGISTER_SUCCESS(20000, "会员注册成功!"),
+    MEMBER_REGISTER_FAIL(20001, "会员注册失败!"),
+
+    MQ_MESSAGE_TYPE_ERROR(30000, "MQ消息类型错误!"),
+    MQ_MESSAGE_CONTENT_NOT_BLANK(30001, "MQ消息不能为空!"),
     ;
 
 

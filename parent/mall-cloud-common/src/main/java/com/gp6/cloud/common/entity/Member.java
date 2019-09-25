@@ -2,6 +2,9 @@ package com.gp6.cloud.common.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
+
+import javax.validation.constraints.NotNull;
 
 /**
  * 会员类
@@ -11,6 +14,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
+@ToString
 public class Member {
     /**
      * id
@@ -20,11 +24,13 @@ public class Member {
     /**
      * 登录账号
      */
+    @NotNull(message = "账号不能为空!")
     private String account;
 
     /**
      * 加密后密码
      */
+    @NotNull(message = "密码不能为空!")
     private String password;
 
     /**

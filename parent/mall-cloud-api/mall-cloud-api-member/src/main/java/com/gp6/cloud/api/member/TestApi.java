@@ -1,4 +1,4 @@
-package com.gp6.cloud.api;
+package com.gp6.cloud.api.member;
 
 import com.gp6.cloud.common.responses.MallResponse;
 import org.springframework.web.bind.annotation.RequestMapping;
