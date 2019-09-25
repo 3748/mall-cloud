@@ -8,8 +8,8 @@ package com.gp6.cloud.common.enums;
  */
 public enum TypeEnum {
 
-    MQ_MESSAGE_EMAIL("1", "邮箱"),
-    MQ_MESSAGE_SMS("2", "短信"),
+    MQ_MESSAGE_EMAIL("1", "MQ消息类型--邮箱"),
+    MQ_MESSAGE_SMS("2", "MQ消息类型--短信"),
 
 
     ;

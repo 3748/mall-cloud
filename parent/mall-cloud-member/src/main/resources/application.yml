@@ -32,3 +32,15 @@ spring:
     username: root
     password: 123456
     url: jdbc:mysql://127.0.0.1:3306/cloud_mall_member?serverTimezone=UTC
+
+  # Activemq连接信息
+  activemq:
+    broker-url: tcp://localhost:61616
+    in-memory: true
+    pool:
+      enabled: false
+
+##队列
+messages:
+  # 发送 邮件/短信 队列
+  queue: messages_queue

@@ -1,6 +1,6 @@
 package com.gp6.cloud.member.mapper;
 
-import com.gp6.cloud.common.base.BaseMapper;
+import com.gp6.cloud.member.base.BaseMapper;
 import com.gp6.cloud.common.entity.Member;
 
 /**

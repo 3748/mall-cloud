@@ -10,6 +10,7 @@ public enum ResponseCodeEnum {
 
     SYSTEM_ERROR(10000, "系统错误!"),
     REQUEST_PARAM_ERROR(10001, "参数错误!"),
+    CAST_ERROR(10002, "类型转换错误!"),
 
 
     MEMBER_REGISTER_SUCCESS(20000, "会员注册成功!"),
