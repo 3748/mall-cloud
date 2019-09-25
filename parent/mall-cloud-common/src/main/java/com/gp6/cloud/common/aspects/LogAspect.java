@@ -29,7 +29,7 @@ public class LogAspect {
     /**
      * 申明一个切点
      */
-    @Pointcut("execution(public * com.gp6.cloud.impl..*(..)))")
+    @Pointcut("execution(public * com.gp6.cloud.*.impl..*(..)))")
     private void apiImplAspect() {
 
     }
@@ -46,7 +46,7 @@ public class LogAspect {
         if (requestAttributes != null) {
             request = requestAttributes.getRequest();
         }
-        log.info("Request Start");
+        log.info("Request Start==================================");
         try {
             // 打印请求内容
             if (request != null) {
@@ -58,7 +58,7 @@ public class LogAspect {
         } catch (Exception e) {
             log.error("beforeAspect,error:{}", e);
         }
-        log.info("Request End");
+        log.info("Request End==================================");
     }
 
     /**
@@ -68,12 +68,12 @@ public class LogAspect {
      */
     @AfterReturning(returning = "o", value = "apiImplAspect()")
     public void afterAspect(Object o) {
-        log.info("Response Start");
+        log.info("Response Start>>>>>>>>>>>>>>>>>>>>>");
         try {
             log.info("Response:" + OBJECT_MAPPER.writeValueAsString(o));
         } catch (Exception e) {
             log.error("afterAspect() error:{}", e);
         }
-        log.info("Response End");
+        log.info("Response End>>>>>>>>>>>>>>>>>>>>>>>>");
     }
 }
