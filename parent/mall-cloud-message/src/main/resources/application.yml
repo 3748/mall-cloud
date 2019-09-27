@@ -13,17 +13,3 @@ spring:
     in-memory: true
     pool:
       enabled: false
-  mail:
-    host: smtp.qiye.163.com
-    username: pfgao@ips.com
-    password: Gao15601
-    enable:  true
-    smtp:
-      auth: true
-    starttls:
-      enable: true
-      required: true
-
-msg:
-  subject: GP6提示您,会员注册成功邮件!
-  text:  恭喜您的账户{},注册成功!

@@ -49,7 +49,9 @@ public class ConsumerDistribute {
             }
             // 获取消息内容
             ActiveMqBean activeMqBean = OBJECT_MAPPER.readValue(msg, ActiveMqBean.class);
+            // 消息头部
             String type = activeMqBean.getHeaderBean().getType();
+            // 消息内容
             String content = activeMqBean.getContent().get("content").toString();
 
             if (StringUtils.isEmpty(type)) {
@@ -68,5 +70,4 @@ public class ConsumerDistribute {
             log.error("类型转换异常,原因:[{}]:", e);
         }
     }
-
 }

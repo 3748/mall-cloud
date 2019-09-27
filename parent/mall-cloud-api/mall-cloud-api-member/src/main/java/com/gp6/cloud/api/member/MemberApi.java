@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author gp6
  * @date 2019/09/23
  */
-@RequestMapping("member")
+@RequestMapping("api/member")
 public interface MemberApi {
 
     /**
@@ -22,7 +22,7 @@ public interface MemberApi {
      *
      * @return 会员列表
      */
-    @GetMapping
+    @GetMapping("1")
     MallResponse selectList();
 
     /**

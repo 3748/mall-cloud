@@ -13,6 +13,7 @@
         <module>mall-cloud-common</module>
         <module>mall-cloud-member</module>
         <module>mall-cloud-message</module>
+        <module>mall-cloud-web</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -24,15 +25,20 @@
     </parent>
 
     <properties>
-        <!-- Java版本 -->
+        <!-- Java -->
         <java.version>1.8</java.version>
 
-        <!-- SpringCloud版本 -->
+        <!-- SpringCloud -->
         <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
 
-        <!-- 整合Mybatis -->
+        <!-- SpringCloud Feign -->
+        <spring-cloud-feign.version>1.3.1.RELEASE</spring-cloud-feign.version>
+
+        <!-- Mybatis -->
         <mybatis-boot.version>2.0.1</mybatis-boot.version>
         <tk-mybatis.version>2.1.0</tk-mybatis.version>
+
+
 
     </properties>
 

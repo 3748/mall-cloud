@@ -6,3 +6,5 @@ parent/mall-cloud-common/target/
 parent/log/
 parent/mall-cloud-member/target/
 parent/mall-cloud-message/target/
+parent/mall-cloud-web/target/
+*.iml
