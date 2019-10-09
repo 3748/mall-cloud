@@ -27,7 +27,7 @@ public class MemberController {
      *
      * @return 会员列表
      */
-    @GetMapping("1")
+    @GetMapping
     public MallResponse selectList() {
         return memberApiFeign.selectList();
     }

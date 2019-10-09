@@ -22,7 +22,7 @@ public interface MemberApi {
      *
      * @return 会员列表
      */
-    @GetMapping("1")
+    @GetMapping
     MallResponse selectList();
 
     /**
