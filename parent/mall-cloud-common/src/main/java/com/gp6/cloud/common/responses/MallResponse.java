@@ -2,12 +2,15 @@ package com.gp6.cloud.common.responses;
 
 import com.gp6.cloud.common.enums.ResponseCodeEnum;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.springframework.http.HttpStatus;
 
+import java.io.Serializable;
+
 /**
- * 智慧仓自定义响应结构
+ * 自定义响应结构
  *
  * @author gp6
  * @date 2018-12-25
@@ -15,7 +18,8 @@ import org.springframework.http.HttpStatus;
 @Getter
 @Setter
 @ToString
-public class MallResponse {
+@NoArgsConstructor
+public class MallResponse implements Serializable {
 
     /**
      * 返回状态
