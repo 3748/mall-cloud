@@ -5,3 +5,6 @@ parent/mall-cloud-eureka-server/target/
 parent/mall-cloud-common/target/
 parent/log/
 parent/mall-cloud-member/target/
+parent/mall-cloud-message/target/
+*.iml
+*.class
