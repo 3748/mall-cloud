@@ -26,7 +26,7 @@ public class ExceptionAspect {
      * @param proceedingJoinPoint ProceedingJoinPoint
      * @return MallResponse
      */
-    @Around("execution(public * com.gp6.cloud.*.impl..*(..)))")
+    @Around("execution(public * com.gp6.cloud.impl..*(..)))")
     public MallResponse aroundAspect(ProceedingJoinPoint proceedingJoinPoint) {
         MallResponse mallResponse;
         try {

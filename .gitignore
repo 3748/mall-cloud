@@ -8,3 +8,4 @@ parent/mall-cloud-member/target/
 parent/mall-cloud-message/target/
 *.iml
 *.class
+parent/mall-cloud-web/target/
