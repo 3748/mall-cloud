@@ -1,4 +1,4 @@
-package com.gp6.cloud.member.impl;
+package com.gp6.cloud.impl;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

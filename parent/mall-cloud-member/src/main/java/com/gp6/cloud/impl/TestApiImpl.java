@@ -1,4 +1,4 @@
-package com.gp6.cloud.member.impl;
+package com.gp6.cloud.impl;
 
 import com.gp6.cloud.api.member.TestApi;
 import com.gp6.cloud.common.enums.ResponseCodeEnum;
