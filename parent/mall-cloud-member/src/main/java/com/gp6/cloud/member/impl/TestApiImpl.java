@@ -20,5 +20,4 @@ public class TestApiImpl implements TestApi {
         throw new MallException(ResponseCodeEnum.REQUEST_PARAM_ERROR);
     }
 
-
 }
