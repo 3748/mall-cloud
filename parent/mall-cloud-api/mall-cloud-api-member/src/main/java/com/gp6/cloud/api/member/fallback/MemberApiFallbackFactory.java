@@ -1,9 +1,9 @@
-package com.gp6.cloud.web.fallback;
+package com.gp6.cloud.api.member.fallback;
 
 import com.gp6.cloud.common.entity.Member;
 import com.gp6.cloud.common.enums.ResponseCodeEnum;
 import com.gp6.cloud.common.responses.MallResponse;
-import com.gp6.cloud.web.feign.MemberApiFeign;
+import com.gp6.cloud.api.member.feign.MemberApiFeign;
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
 

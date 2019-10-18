@@ -1,4 +1,4 @@
-package com.gp6.cloud.impl;
+package com.gp6.cloud.member.impl;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -54,19 +54,18 @@ public class MemberApiImpl implements MemberApi {
         return MallResponse.ok(memberList);
     }
 
-    //@Transactional(rollbackFor = Exception.class)
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public MallResponse register(@RequestBody Member member) {
-        throw new MallException(ResponseCodeEnum.REQUEST_PARAM_ERROR);
         // 参数校验
-//        ValidateUtil.validate(member);
-//        member.setCreateTime(DateTimeUtil.getCurrentTime());
-//        if (memberMapper.insert(member) <= 0) {
-//            return MallResponse.build(ResponseCodeEnum.MEMBER_REGISTER_FAIL);
-//        }
-//        // 采用异步方式发送邮件
-//        sendMqMsg(member.getEmail());
-//        return MallResponse.build(ResponseCodeEnum.MEMBER_REGISTER_SUCCESS);
+        ValidateUtil.validate(member);
+        member.setCreateTime(DateTimeUtil.getCurrentTime());
+        if (memberMapper.insert(member) <= 0) {
+            return MallResponse.build(ResponseCodeEnum.MEMBER_REGISTER_FAIL);
+        }
+        // 采用异步方式发送邮件
+        sendMqMsg(member.getEmail());
+        return MallResponse.build(ResponseCodeEnum.MEMBER_REGISTER_SUCCESS);
     }
 
     /**

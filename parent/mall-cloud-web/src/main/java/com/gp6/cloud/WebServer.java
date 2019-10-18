@@ -1,4 +1,4 @@
-package com.gp6.cloud.web;
+package com.gp6.cloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

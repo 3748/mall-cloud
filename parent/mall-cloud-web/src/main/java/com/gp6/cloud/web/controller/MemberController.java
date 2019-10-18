@@ -2,7 +2,7 @@ package com.gp6.cloud.web.controller;
 
 import com.gp6.cloud.common.entity.Member;
 import com.gp6.cloud.common.responses.MallResponse;
-import com.gp6.cloud.web.feign.MemberApiFeign;
+import com.gp6.cloud.api.member.feign.MemberApiFeign;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

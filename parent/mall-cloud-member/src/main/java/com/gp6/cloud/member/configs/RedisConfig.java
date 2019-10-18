@@ -1,5 +1,6 @@
-package com.gp6.cloud.common.redis;
+package com.gp6.cloud.member.configs;
 
+import com.gp6.cloud.common.utils.RedisUtil;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

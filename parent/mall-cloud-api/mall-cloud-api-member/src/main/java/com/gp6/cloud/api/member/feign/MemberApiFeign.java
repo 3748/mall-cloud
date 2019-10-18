@@ -1,9 +1,9 @@
-package com.gp6.cloud.web.feign;
+package com.gp6.cloud.api.member.feign;
 
 import com.gp6.cloud.api.member.MemberApi;
-import com.gp6.cloud.web.fallback.MemberApiFallbackFactory;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
+import com.gp6.cloud.api.member.fallback.MemberApiFallbackFactory;
 
 /**
  * 会员Api Feign

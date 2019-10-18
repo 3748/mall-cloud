@@ -1,4 +1,4 @@
-package com.gp6.cloud.web.ribbon;
+package com.gp6.cloud.common.ribbon;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RetryRule;

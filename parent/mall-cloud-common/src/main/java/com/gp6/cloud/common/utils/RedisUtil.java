@@ -1,4 +1,4 @@
-package com.gp6.cloud.common.redis;
+package com.gp6.cloud.common.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
