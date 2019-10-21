@@ -68,12 +68,10 @@ public class LogAspect {
      */
     @AfterReturning(returning = "o", value = "apiImplAspect()")
     public void afterAspect(Object o) {
-        log.info("Response Start>>>>>>>>>>>>>>>>>>>>>");
         try {
-            log.info("Response:" + OBJECT_MAPPER.writeValueAsString(o));
+            log.info("Response>>>>>>>>>>>>>>>>>>>>>:" + OBJECT_MAPPER.writeValueAsString(o));
         } catch (Exception e) {
             log.error("afterAspect() error:{}", e);
         }
-        log.info("Response End>>>>>>>>>>>>>>>>>>>>>>>>");
     }
 }

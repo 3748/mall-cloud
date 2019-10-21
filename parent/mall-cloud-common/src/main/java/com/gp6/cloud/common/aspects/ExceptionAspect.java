@@ -31,7 +31,6 @@ public class ExceptionAspect {
         try {
             mallResponse = (MallResponse) proceedingJoinPoint.proceed();
         } catch (MallException mallException) {
-            //throw new MallException(ResponseCodeEnum.REQUEST_PARAM_ERROR);
             return MallResponse.build(mallException.getResponseCodeEnum());
         } catch (Throwable e) {
             log.error("aroundAspect,error:{}", e);
