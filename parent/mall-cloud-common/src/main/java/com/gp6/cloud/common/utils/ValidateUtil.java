@@ -1,6 +1,5 @@
 package com.gp6.cloud.common.utils;
 
-
 import com.gp6.cloud.common.enums.ResponseCodeEnum;
 import com.gp6.cloud.common.exceptions.MallException;
 import org.apache.commons.lang3.StringUtils;
