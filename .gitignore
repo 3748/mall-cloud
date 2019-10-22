@@ -9,3 +9,4 @@ parent/mall-cloud-message/target/
 parent/mall-cloud-web/target/
 *.iml
 parent/mall-cloud-hystrix-dashboard/target/
+parent/mall-cloud-zuul/target/

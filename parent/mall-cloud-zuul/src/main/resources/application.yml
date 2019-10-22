@@ -1,0 +1,18 @@
+server:
+  port: 8766
+
+spring:
+  application:
+    name: zuul-gateway
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8781/eureka/
+
+  instance:
+    # 名称
+    instance-id: ${eureka.instance.ip-address}:${server.port}:@project.version@
+    # 访问路径可以显示IP地址
+    prefer-ip-address: true
+    ip-address: 192.168.8.36

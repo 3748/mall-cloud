@@ -15,6 +15,7 @@
         <module>mall-cloud-message</module>
         <module>mall-cloud-web</module>
         <module>mall-cloud-hystrix-dashboard</module>
+        <module>mall-cloud-zuul</module>
     </modules>
     <packaging>pom</packaging>
 
