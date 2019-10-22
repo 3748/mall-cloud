@@ -16,3 +16,12 @@ eureka:
     # 访问路径可以显示IP地址
     prefer-ip-address: true
     ip-address: 192.168.8.36
+
+zuul:
+  # 所有请求,都要加
+  prefix: /gp6
+  # 此注解控制能否通过项目名访问服务
+  # ignored-services: "*"
+  routes:
+    web.serviceId: web
+    web.path: /mall/**
