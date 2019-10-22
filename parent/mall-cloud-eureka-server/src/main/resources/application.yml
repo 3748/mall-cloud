@@ -1,5 +1,6 @@
 server:
   port: 8781
+
 eureka:
   instance:
     # eureka服务端的实例名称
@@ -12,4 +13,4 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       # 单机 defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/       #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）。
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaulZone: http://${eureka.instance.hostname}:${server.port}/eureka/

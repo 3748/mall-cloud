@@ -12,6 +12,13 @@ feign:
   hystrix:
     enabled: true
 
+# 暴露全部的监控信息(Dashboard使用)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 #ribbon:
 #  eureka:
 #    enabled: true
