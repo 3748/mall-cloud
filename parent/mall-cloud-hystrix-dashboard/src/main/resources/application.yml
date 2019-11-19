@@ -3,4 +3,5 @@ server:
 
 spring:
   application:
+    # http://127.0.0.1:8765/hystrix
     name: hystrix-dashboard
